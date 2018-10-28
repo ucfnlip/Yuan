@@ -1,3 +1,15 @@
+---
+title: "Producing Reproducible Research Using RMarkdown and Github"
+output:
+  html_notebook: default
+  word_document: default
+  
+author: Yuan Li
+bibliography: 
+ - RReferences.bib
+  
+---
+
 hahahahaha
 ```{python}
 print('hello world')
