@@ -1,0 +1,12 @@
+```{r}
+GMData <- read_csv('20181031154530654_EGRPDT_UNIT/Data_EGRPDT_UNIT.csv')
+GMBorough <- read_shape("GMBoundaryData/england_ct_2011.shp", as.sf = TRUE)
+BoroughDataMap <- append_data(GMBorough,GMData, key.shp = "code", key.data = "GEO_CODE", ignore.duplicates = TRUE)
+tmap_mode("plot")
+tm_shape(BoroughDataMap) +
+    tm_polygons(c("Schoolchild_or_full-time_student_aged_4_and_over_at_their_non-term-time_address", "Density_(number_of_persons_per_Hectare)","All_usual_residents","All_usual_residents_in_households","All_usual_residents_in_communal_establishments","All_usual_residents_in_communal_establishments_(including_people_enumerated_as_sleeping_rough)"), 
+        palette=list("YlOrBr", "Purples","YlOrRd","YlGnBu","RdPu","OrRd"),       
+        auto.palette.mapping=FALSE,
+        title=c("Schoolchild or student", "Density","All usual residents","residents in households","residents in communal establishments","residents_in_communal_establishments_(including_people_enumerated_as_sleeping_rough)"))
+```
+
