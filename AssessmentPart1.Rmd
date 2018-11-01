@@ -21,4 +21,4 @@ tm_shape(BoroughDataMap) +
         auto.palette.mapping=FALSE,
         title=c("Schoolchild or student", "Density","residents","households","communal establishments","establishments including sleeping rough)"))
 ```
-
+000
