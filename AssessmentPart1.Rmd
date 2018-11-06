@@ -25,14 +25,16 @@ tm_shape(BoroughDataMap) +
   tm_scale_bar(position = c("right", "bottom")) +
   tm_layout(title =c("Schoolchild or student", "Density","residents","households","communal establishments","establishments including sleeping rough)"), legend.position = c("left", "bottom"))
 ```
-![RMAP](Rplot.png)
+![RMAP](GISplot.png)
 
 ![GISMAP](GISplot.png)
 ```{r}
 library(png)
 library(grid)
 image1 <- readPNG("D:/Data/OneDrive/UCL/Term1/CASA0005 Geographic Information Systems and Science/N/gis_code/gis_code/Rplot.png")
+image2 <- readPNG("D:/Data/OneDrive/UCL/Term1/CASA0005 Geographic Information Systems and Science/N/gis_code/gis_code/GISplot.png")
 grid.raster(image1)
+grid.raster(image2)
 ```
 
 
