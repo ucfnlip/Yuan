@@ -19,6 +19,10 @@ tm_shape(BoroughDataMap) +
     tm_polygons(c("Schoolchild_or_full-time_student_aged_4_and_over_at_their_non-term-time_address", "Density_(number_of_persons_per_Hectare)","All_usual_residents","All_usual_residents_in_households","All_usual_residents_in_communal_establishments","All_usual_residents_in_communal_establishments_(including_people_enumerated_as_sleeping_rough)"), 
         palette=list("YlOrBr", "Purples","YlOrRd","YlGnBu","RdPu","OrRd"),       
         auto.palette.mapping=FALSE,
-        title=c("Schoolchild or student", "Density","residents","households","communal establishments","establishments including sleeping rough)"))
+        title="Legend",
+        alpha = 0.5) + 
+  tm_compass(position = c("right", "bottom"),type = "arrow") + 
+  tm_scale_bar(position = c("right", "bottom")) +
+  tm_layout(title =c("Schoolchild or student", "Density","residents","households","communal establishments","establishments including sleeping rough)"), legend.position = c("left", "bottom"))
 ```
 00
