@@ -25,7 +25,7 @@ tm_shape(BoroughDataMap) +
   tm_scale_bar(position = c("right", "bottom")) +
   tm_layout(title =c("Schoolchild or student", "Density","residents","households","communal establishments","establishments including sleeping rough)"), legend.position = c("left", "bottom"))
 ```
-![RMAP](GISplot.png)
+![RMAP](Rplot.png)
 
 ![GISMAP](GISplot.png)
 ```{r}
