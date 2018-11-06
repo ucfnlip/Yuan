@@ -25,8 +25,16 @@ tm_shape(BoroughDataMap) +
   tm_scale_bar(position = c("right", "bottom")) +
   tm_layout(title =c("Schoolchild or student", "Density","residents","households","communal establishments","establishments including sleeping rough)"), legend.position = c("left", "bottom"))
 ```
-![](D:/Data/OneDrive/UCL/Term1/CASA0005 Geographic Information Systems and Science/N/gis_code/gis_code/Rplot.png)
-Word Count: 590
+![](Rplot.png)
+```{r}
+library(png)
+library(grid)
+image1 <- readPNG("D:/Data/OneDrive/UCL/Term1/CASA0005 Geographic Information Systems and Science/N/gis_code/gis_code/Rplot.png")
+grid.raster(image1)
+```
+
+
+Words Count: 590
 
 Explanation of two made maps:
 Two maps were made by ArcGIS and R Studio respectively. Map1 illustrates the numbers of pubs(which is 190) within the area of 200 meters around the shortest route by walk from the Manchester Piccadilly station to the main building of the University of Manchester. The work flow is, downloaded the data form the UK census and attached them into ArcGIS at first. Then the network dataset had been set, and evaluated the shortest route from two points. At last buffered the line and selected out the pubs within this area.
